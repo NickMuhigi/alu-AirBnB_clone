@@ -29,7 +29,6 @@ class HBNBCommand(cmd.Cmd):
         Usage:
             EOF
         """
-        print()
         return True
 
     def emptyline(self):
@@ -37,16 +36,6 @@ class HBNBCommand(cmd.Cmd):
         An empty line + ENTER shouldn't execute anything
         """
         pass
-
-    def default(self, line):
-        """
-        Default action for any input.
-        If the input line consists only of spaces, it will still do nothing
-        """
-        if line.strip() == '':
-            return
-        else:
-            print(f"Command not recognized: {line}")
 
     def do_create(self, arg):
         """
